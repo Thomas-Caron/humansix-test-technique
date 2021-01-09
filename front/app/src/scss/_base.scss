@@ -1,0 +1,66 @@
+html, body {
+  font-size: 14px;
+  font-family: "Montserrat", "Arial";
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat Black", "Arial Black";
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 1rem auto 0.5rem auto;
+}
+
+h3 {
+  margin-bottom: .5rem;
+}
+
+section {
+  margin-bottom: 1rem;
+  p {
+    margin-left: 1rem;
+  }
+}
+
+.main-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: opacity .5s, transform .5s ease;
+}
+
+.slide-enter-from, .slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}

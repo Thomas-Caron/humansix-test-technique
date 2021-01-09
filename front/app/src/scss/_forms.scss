@@ -1,0 +1,132 @@
+form {
+    fieldset {
+      border: none;
+  
+      .field {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  
+  .field {
+    $self: &;
+  
+    display: flex;
+    flex: {
+      direction: column;
+      wrap: wrap;
+    }
+  
+    > * {
+      width: 100%;
+    }
+  
+    &__label {
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+  
+    &__input {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: $primaryBackgroundColor;
+      margin-bottom: 1rem;
+      font-family: "Montserrat", Arial;
+    }
+  
+    &__input:focus {
+      outline-color: $primaryStrongColor;
+      outline-width: 1px;
+    }
+  
+    &--error {
+      #{$self}__label {
+        color: $errorColor;
+      }
+  
+      #{$self}__input {
+        border-color: $errorColor;
+        color: $errorColor;
+  
+        &::placeholder {
+          color: $errorColor;
+        }
+      }
+    }
+  
+    &__error-list {
+      color: $errorColor;
+      list-style: none;
+      text-align: left;
+      padding-left: 0;
+    }
+  }
+  
+  .textarea {
+    &.field__input {
+      width: 100%;
+      height: 8rem;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: $primaryBackgroundColor;
+      margin-bottom: 1rem;
+      font-family: "Montserrat", Arial;
+    }
+  }
+  
+  .alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  
+    &.error {
+      background-color: $errorColor;
+      color: white;
+    }
+  
+    &.success {
+      background-color: $primaryStrongColor;
+      color: white;
+    }
+  }
+  
+  .button {
+    background-color: #42b983;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  
+    &:hover {
+      color: #fff;
+    }
+  }
+  
+  .select {
+    background-color: $primaryBackgroundColor;
+    font: {
+      family: "Montserrat", "Arial";
+      size: 1rem;
+    }
+    outline: $primaryStrongColor;
+    padding: .5rem 1rem;
+  
+    &[multiple] {
+      overflow: auto;
+      padding: 0;
+    }
+  
+    option {
+      padding: .25rem .5rem;
+  
+      &:hover,
+      &:checked {
+        background-color: #42b983;
+        color: #fff;
+      }
+    }
+  }
+  
